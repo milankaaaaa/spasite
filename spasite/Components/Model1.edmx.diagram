@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="7e4ab3416db74eeeab003dc7463d1113" Name="Diagram1">
+        <EntityTypeShape EntityType="Lab_22Model.Application" Width="1.5" PointX="10.5" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Lab_22Model.Country" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Lab_22Model.Department" Width="1.5" PointX="3" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Lab_22Model.Discipline" Width="1.5" PointX="5.25" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Lab_22Model.Employee" Width="1.5" PointX="5.25" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Lab_22Model.Engineer" Width="1.5" PointX="7.5" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Lab_22Model.Exam" Width="1.5" PointX="12.75" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Lab_22Model.Faculty" Width="1.5" PointX="0.75" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="Lab_22Model.Head_Department" Width="1.5" PointX="7.5" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="Lab_22Model.Management" Width="1.5" PointX="7.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Lab_22Model.Management_Your_family" Width="1.5" PointX="9.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Lab_22Model.Specialization" Width="1.5" PointX="5.25" PointY="14.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Lab_22Model.Student" Width="1.5" PointX="7.5" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Lab_22Model.Teacher" Width="1.5" PointX="7.5" PointY="11.5" IsExpanded="true" />
+        <AssociationConnector Association="Lab_22Model.FK__Applicati__Id_di__4D94879B" ManuallyRouted="false" />
+        <AssociationConnector Association="Lab_22Model.FK__Applicati__Id_sp__4E88ABD4" ManuallyRouted="false" />
+        <AssociationConnector Association="Lab_22Model.FK__Departmen__Id_ab__4F7CD00D" ManuallyRouted="false" />
+        <AssociationConnector Association="Lab_22Model.FK__Disciplin__Id_co__5070F446" ManuallyRouted="false" />
+        <AssociationConnector Association="Lab_22Model.FK__Employee__Id_cod__5165187F" ManuallyRouted="false" />
+        <AssociationConnector Association="Lab_22Model.FK__Specializ__Id_co__571DF1D5" ManuallyRouted="false" />
+        <AssociationConnector Association="Lab_22Model.FK__Exam__Id_discipl__534D60F1" ManuallyRouted="false" />
+        <AssociationConnector Association="Lab_22Model.FK__Engineer__Id_emp__52593CB8" ManuallyRouted="false" />
+        <AssociationConnector Association="Lab_22Model.FK__Exam__Id_employe__5441852A" ManuallyRouted="false" />
+        <AssociationConnector Association="Lab_22Model.FK__Head_Depa__Id_em__5629CD9C" ManuallyRouted="false" />
+        <AssociationConnector Association="Lab_22Model.FK__Teacher__Id_empl__59063A47" ManuallyRouted="false" />
+        <AssociationConnector Association="Lab_22Model.FK__Exam__Id_student__5535A963" ManuallyRouted="false" />
+        <AssociationConnector Association="Lab_22Model.FK__Student__Id_spec__5812160E" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -16,13 +16,20 @@ using System.Windows.Shapes;
 namespace spasite.Components
 {
     /// <summary>
-    /// Логика взаимодействия для DepartmentHeadMode.xaml
+    /// Логика взаимодействия для GuestPage.xaml
     /// </summary>
-    public partial class DepartmentHeadMode : Page
+    public partial class GuestPage : Page
     {
-        public DepartmentHeadMode()
+        public GuestPage()
         {
             InitializeComponent();
+            DisciplineDataGrid.ItemsSource = App.db.Discipline.ToList();
+            DisciplineDataGrid.DataContext = App.db.Discipline.ToList();
+        }
+
+        private void DisciplineDataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+             
         }
     }
 }

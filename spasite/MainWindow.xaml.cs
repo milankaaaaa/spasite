@@ -1,4 +1,5 @@
-﻿using System;
+﻿using spasite.Components;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,21 +24,13 @@ namespace spasite
         public MainWindow()
         {
             InitializeComponent();
-        }
-
-        private void MainFrame_Navigated(object sender, NavigationEventArgs e)
-        {
-
-        }
-
-        private void ygj_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void gsh_Click(object sender, RoutedEventArgs e)
-        {
-
+            MainFrame.NavigationService.Navigate(new AuthorizatePage());
         }
     }
 }
+       
+
+        
+       
+
+       

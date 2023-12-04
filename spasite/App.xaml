@@ -9,6 +9,7 @@
                 <Setter Property="Background" Value="#FFC0C0" />
                 <Setter Property="Foreground" Value="White" />
                 <Setter Property="FontSize" Value="16" />
+                
             </Style>
         </ResourceDictionary>
     </Application.Resources>

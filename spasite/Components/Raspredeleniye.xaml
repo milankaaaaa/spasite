@@ -10,11 +10,11 @@
 
     <Grid>
         <StackPanel Background="#FFFFF4F6">
-            
+            <TextBlock HorizontalAlignment="Center" Margin="120" FontSize="20" FontWeight="Black" Foreground="Pink" >РЕГИСТРАЦИЯ</TextBlock>
         </StackPanel>
-        <Button x:Name="engineer"  HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 0 150 0" Content="для инженера"  Background="Pink" Foreground="White" BorderBrush="#FFCE8A97" Click="engineer_Click"/>
-        <Button x:Name="guest" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="500 0 0 0" Content="для гостя" Width="73"  Background="Pink" Foreground="White" BorderBrush="#FFCE8A97" Click="guest_Click"/>
-        <Button x:Name="teacher" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 0 500 0" Content="для учителя" Width="73"  Background="Pink" Foreground="White" BorderBrush="#FFCE8A97" Click="teacher_Click"/>
-        <Button x:Name="departament" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="150 0 0 0" Content="для заведующего" Width="100"  Background="Pink" Foreground="White" BorderBrush="#FFCE8A97" Click="departament_Click"/>
+        <Button x:Name="engineer"  HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 0 170 0" Content="Для инженера" Background="Pink" Foreground="White" BorderBrush="#FFCE8A97" Width="110" Height="50" Click="engineer_Click"/>
+        <Button x:Name="guest" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="500 0 0 0" Content="Для гостя"  Background="Pink" Foreground="White" BorderBrush="#FFCE8A97" Width="110" Height="50" Click="guest_Click"/>
+        <Button x:Name="teacher" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 0 500 0" Content="Для учителя" Background="Pink" Foreground="White" BorderBrush="#FFCE8A97" Width="110" Height="50" Click="teacher_Click"/>
+        <Button x:Name="departament" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="170 0 0 0" Content="Для заведующего" Background="Pink" Foreground="White" BorderBrush="#FFCE8A97" Width="110" Height="50" Click="departament_Click"/>
     </Grid>
 </Page>

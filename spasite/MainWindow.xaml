@@ -6,20 +6,5 @@
         xmlns:local="clr-namespace:spasite"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="68*"/>
-            <RowDefinition Height="287*"/>
-            <RowDefinition Height="60*"/>
-        </Grid.RowDefinitions>
-        <Rectangle Fill ="Pink" ></Rectangle>
-        <Rectangle Fill ="Pink"  Grid.Row="2"></Rectangle>
-        <TextBlock Grid.Column="1"></TextBlock>
-        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Margin="0 0 0 55" Foreground="Pink"  FontSize="15" FontWeight="Bold">ПЛАТФОРМА "WINK"</TextBlock>
-        <StackPanel  HorizontalAlignment="Left" VerticalAlignment="Bottom" Grid.Row="2"></StackPanel>
-        <Frame x:Name="MainFrame" Grid.Row="1" Navigated="MainFrame_Navigated" ></Frame>
-        <Button x:Name="ygj" Background="Pink" Foreground="White" BorderBrush="#FFCE8A97" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Content="регистрация" Click="ygj_Click"/>
-        <Button x:Name="gsh" Background="Pink" Foreground="White" BorderBrush="#FFCE8A97" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 50 0 0" Content="вход" Width="73" Click="gsh_Click" />
-        <Image Source="C:\Users\Mars\source\repos\spasite\spasite\wpfka.png" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="1" Width="220" Margin="100 0 0 0" ></Image>
-    </Grid>
+    <Frame x:Name="MainFrame"></Frame>
 </Window>                                              

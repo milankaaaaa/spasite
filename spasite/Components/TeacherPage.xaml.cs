@@ -16,13 +16,15 @@ using System.Windows.Shapes;
 namespace spasite.Components
 {
     /// <summary>
-    /// Логика взаимодействия для EngineerMode.xaml
+    /// Логика взаимодействия для TeacherPage.xaml
     /// </summary>
-    public partial class EngineerMode : Page
+    public partial class TeacherPage : Page
     {
-        public EngineerMode()
+        public TeacherPage()
         {
             InitializeComponent();
         }
+
+       
     }
 }

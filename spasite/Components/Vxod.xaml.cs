@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace spasite.Components
 {
     /// <summary>
-    /// Логика взаимодействия для GuestMode.xaml
+    /// Логика взаимодействия для Vxod.xaml
     /// </summary>
-    public partial class GuestMode : Page
+    public partial class Vxod : Page
     {
-        public GuestMode()
+        public Vxod()
         {
             InitializeComponent();
         }
