@@ -39,5 +39,7 @@ namespace spasite.Components
         public virtual DbSet<Specialization> Specialization { get; set; }
         public virtual DbSet<Student> Student { get; set; }
         public virtual DbSet<Teacher> Teacher { get; set; }
+        public object Cathedra { get; internal set; }
+        public object HeadOfTheDepartment { get; internal set; }
     }
 }

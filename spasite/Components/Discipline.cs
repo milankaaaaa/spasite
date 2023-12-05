@@ -14,6 +14,8 @@ namespace spasite.Components
     
     public partial class Discipline
     {
+        internal object id;
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Discipline()
         {

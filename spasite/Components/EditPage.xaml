@@ -1,0 +1,28 @@
+﻿<Page x:Class="spasite.Components.EditPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:spasite.Components"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="EditPage">
+
+    <Grid Background="#FFFFFBFC">
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock FontWeight="Bold" Foreground="#FFCE8A97">КОД</TextBlock>
+            <TextBox Name="IdTb" Width="200" Text="{Binding id}" IsEnabled="False" />
+            <TextBlock FontWeight="Bold" Foreground="#FFCE8A97">ШИФР</TextBlock>
+            <ComboBox Name="CodeCb" Width="200" DisplayMemberPath="Name" SelectedItem="{Binding Cathedra}" IsEnabled="True" SelectionChanged="CodeCb_SelectionChanged" />
+            <TextBlock FontWeight="Bold" Foreground="#FFCE8A97" >ФАМИЛИЯ</TextBlock>
+            <TextBox Name="LastNameTb" Width="200" Text="{Binding LastName}" />
+            <TextBlock FontWeight="Bold" Foreground="#FFCE8A97">ДОЛЖНОСТЬ</TextBlock>
+            <ComboBox Width="200" Name="PositionCb" SelectedItem="{Binding PositionT}" DisplayMemberPath="Name" />
+            <TextBlock FontWeight="Bold" Foreground="#FFCE8A97">ЗАРПЛАТА</TextBlock>
+            <TextBox x:Name="SalaryTb" Width="200" Text="{Binding Salary}" />
+            <TextBlock FontWeight="Bold" Foreground="#FFCE8A97">НАЧАЛЬСТВО</TextBlock>
+            <ComboBox Width="200" Margin=" 0 0 0 25" Name="ChiefCb" SelectedItem="{Binding Employee2}" DisplayMemberPath="LastName" />
+            <Button Width="200" Content="СОХРАНИТЬ" Name="SaveChangesButton" Click="SaveChangesButton_Click" BorderBrush="#FFCE8A97" Background="Pink" Foreground="White" />
+        </StackPanel>
+    </Grid>
+</Page>

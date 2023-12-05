@@ -29,13 +29,17 @@ namespace spasite.Components
 
         private void EnterBtn_Click(object sender, RoutedEventArgs e)
         {
-            if(PasswordTb.Text == "0000")
+            if (PasswordTb.Text == "0000")
             {
                 NavigationService.Navigate(new GuestPage());
             }
             else if (PasswordTb.Text == "1111")
             {
-                NavigationService.Navigate(new )
+                NavigationService.Navigate(new TeacherPage());
+            }
+            else if (PasswordTb.Text == "2222")
+            {
+                NavigationService.Navigate(new EngineerPage());
             }
         }
     }

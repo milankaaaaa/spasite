@@ -27,5 +27,6 @@ namespace spasite.Components
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Exam> Exam { get; set; }
         public virtual Specialization Specialization { get; set; }
+        public object RegNumber { get; internal set; }
     }
 }

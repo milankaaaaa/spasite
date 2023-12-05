@@ -7,19 +7,17 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="GuestPage">
-
-    <Grid>
+    
+    <Grid Background="#FFFFEAEE">
         <StackPanel>
             <StackPanel>
                 <DataGrid HorizontalAlignment="Center" x:Name="DisciplineDataGrid" AutoGenerateColumns="False" SelectionChanged="DisciplineDataGrid_SelectionChanged">
                     <DataGrid.Columns >
-                        <DataGridTextColumn Header="Дисциплины" Width="100" Binding="{Binding Name }" >
-                            
+                        <DataGridTextColumn Header="ДИСЦИПЛИНЫ" Width="800" Binding="{Binding Name }" >
                         </DataGridTextColumn>
                     </DataGrid.Columns>
                 </DataGrid>
             </StackPanel>
         </StackPanel>
-        
     </Grid>
 </Page>

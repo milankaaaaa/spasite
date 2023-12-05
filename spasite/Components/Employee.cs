@@ -14,6 +14,8 @@ namespace spasite.Components
     
     public partial class Employee
     {
+        internal object id;
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Employee()
         {
@@ -39,5 +41,7 @@ namespace spasite.Components
         public virtual ICollection<Head_Department> Head_Department { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Teacher> Teacher { get; set; }
+        public string Position { get; internal set; }
+        public object LastName { get; internal set; }
     }
 }

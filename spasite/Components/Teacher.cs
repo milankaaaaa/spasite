@@ -14,6 +14,8 @@ namespace spasite.Components
     
     public partial class Teacher
     {
+        internal object[] id;
+
         public int Id_teacher { get; set; }
         public Nullable<int> Id_employee { get; set; }
         public string Name { get; set; }

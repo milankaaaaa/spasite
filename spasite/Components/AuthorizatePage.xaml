@@ -7,10 +7,9 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="AuthorizatePage">
-
+    
     <Grid Background="#FFFFF4F6">
         <StackPanel>
-           
             <TextBlock Grid.Column="1"></TextBlock>
             <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Margin="0,100,0,0" Foreground="Pink"  FontSize="20" FontWeight="Bold">ПЛАТФОРМА "MINK"</TextBlock>
             <StackPanel >
@@ -18,8 +17,7 @@
                 <TextBox x:Name="PasswordTb" Margin="10" Width="85"/>
             </StackPanel>
             <Button x:Name="EnterBtn" Background="Pink" Foreground="White" BorderBrush="#FFCE8A97" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 0 0 0" Content="вход" Width="85" Click="EnterBtn_Click"/>
-            
-        </StackPanel>
-        <Image Source="\Resourses\wpfka.png" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="1" Width="220" Margin="100 0 0 50" ></Image>
+           </StackPanel>
+        <Image Source="\Resourses\wpfka.png" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="1" Width="220" Margin="80 0 0 50" ></Image>
     </Grid>
 </Page>

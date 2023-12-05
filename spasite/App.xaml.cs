@@ -16,5 +16,8 @@ namespace spasite
     public partial class App : Application
     {
         public static Lab_22Entities db = new Lab_22Entities();
+
+        public static int COuntOfExams { get; internal set; }
+        public static int CountOfEmployeers { get; internal set; }
     }
 }

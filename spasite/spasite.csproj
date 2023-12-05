@@ -68,7 +68,23 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Components\EditDepartmentPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Components\EditPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Components\EngineerPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Components\GuestPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Components\HeadOfTheDepartmentPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -111,11 +127,20 @@
     <Compile Include="Components\Discipline.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Components\EditDepartmentPage.xaml.cs">
+      <DependentUpon>EditDepartmentPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Components\EditPage.xaml.cs">
+      <DependentUpon>EditPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Components\Employee.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Components\Engineer.cs">
       <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Components\EngineerPage.xaml.cs">
+      <DependentUpon>EngineerPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Components\Exam.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -125,6 +150,9 @@
     </Compile>
     <Compile Include="Components\GuestPage.xaml.cs">
       <DependentUpon>GuestPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Components\HeadOfTheDepartmentPage.xaml.cs">
+      <DependentUpon>HeadOfTheDepartmentPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Components\Head_Department.cs">
       <DependentUpon>Model1.tt</DependentUpon>

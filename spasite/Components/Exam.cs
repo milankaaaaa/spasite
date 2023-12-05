@@ -14,6 +14,9 @@ namespace spasite.Components
     
     public partial class Exam
     {
+        internal int id_exam;
+        internal object idcode;
+
         public int Id_exam { get; set; }
         public System.DateTime Date_exam { get; set; }
         public Nullable<int> Id_discipline { get; set; }
@@ -25,5 +28,9 @@ namespace spasite.Components
         public virtual Discipline Discipline { get; set; }
         public virtual Employee Employee { get; set; }
         public virtual Student Student { get; set; }
+        public DateTime? DateOfExam { get; internal set; }
+        public object Assessment { get; internal set; }
+        public object RegNumber { get; internal set; }
+        public object Nunber { get; internal set; }
     }
 }
