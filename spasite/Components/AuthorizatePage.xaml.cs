@@ -29,11 +29,7 @@ namespace spasite.Components
 
         private void EnterBtn_Click(object sender, RoutedEventArgs e)
         {
-            if (PasswordTb.Text == "0000")
-            {
-                NavigationService.Navigate(new GuestPage());
-            }
-            else if (PasswordTb.Text == "1111")
+             if (PasswordTb.Text == "1111")
             {
                 NavigationService.Navigate(new TeacherPage());
             }
@@ -41,6 +37,15 @@ namespace spasite.Components
             {
                 NavigationService.Navigate(new EngineerPage());
             }
+            else if (PasswordTb.Text =="3333")
+            {
+                NavigationService.Navigate(new HeadOfTheDepartmentPage());
+            }
+        }
+
+        private void Guest_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new GuestPage());
         }
     }
 }

@@ -28,11 +28,11 @@ namespace spasite.Components
             ExamsDataGrid.ItemsSource = App.db.Exam.ToList();
             ExamsDataGrid.DataContext = App.db.Exam.ToList();
             StudentsComboBox.ItemsSource = App.db.Student.ToList();
-            StudentsComboBox.DisplayMemberPath = "FirstName";
+            StudentsComboBox.DisplayMemberPath = "Last_name";
             DiscComboBox.ItemsSource = App.db.Discipline.ToList();
             DiscComboBox.DisplayMemberPath = "Name";
             TeachComboBox.ItemsSource = App.db.Employee.ToList();
-            TeachComboBox.DisplayMemberPath = "LastName";
+            TeachComboBox.DisplayMemberPath = "Last_name";
             App.COuntOfExams = App.db.Exam.Count();
 
 
@@ -60,11 +60,11 @@ namespace spasite.Components
                 App.db.Exam.Add(new Exam()
                 {
                     id_exam = App.db.Exam.Count() + 1,
-                    DateOfExam = DateOfExamDp.SelectedDate,
-                    idcode = ((DiscComboBox.SelectedItem) as Discipline).id,
-                    Assessment = null,
-                    RegNumber = (StudentsComboBox.SelectedItem as Student).RegNumber,
-                    Nunber = ((TeachComboBox.SelectedItem) as Employee).id,
+                    Date_exam = DateOfExamDp.SelectedDate,
+                    Id_discipline = (int?)(DiscComboBox.SelectedItem as Discipline).id,
+                    Estimation = 0,
+                    Id_student = (StudentsComboBox.SelectedItem as Student).Id_student,
+                    Id_employee = ((TeachComboBox.SelectedItem) as Employee).Id_employee,
                     Auditorium = AudithoriumTb.Text
                 });
                 App.db.SaveChanges();
@@ -82,13 +82,13 @@ namespace spasite.Components
             if (AssessmentCb.SelectedIndex != -1)
             {
                 if (AssessmentCb.SelectedIndex == 0)
-                    exams = exams.Where(x => x.Assessment == 2);
+                    exams = exams.Where(x => x.Estimation == 2);
                 if (AssessmentCb.SelectedIndex == 1)
-                    exams = exams.Where(x => x.Assessment == 3);
+                    exams = exams.Where(x => x.Estimation == 3);
                 if (AssessmentCb.SelectedIndex == 2)
-                    exams = exams.Where(x => x.Assessment == 4);
+                    exams = exams.Where(x => x.Estimation == 4);
                 if (AssessmentCb.SelectedIndex == 3)
-                    exams = exams.Where(x => x.Assessment == 5);
+                    exams = exams.Where(x => x.Estimation == 5);
             }
             if (NameOfDisciplineSearchTb.Text.Length > 0)
             {
@@ -127,7 +127,7 @@ namespace spasite.Components
                         case 3: grade = 2; break;
                         default: grade = 0; break;
                     }
-                    App.db.Exam.Find(ThatOneExam.id_exam).Assessment = grade;
+                    App.db.Exam.Find(ThatOneExam.id_exam).Estimation = grade;
                     App.db.SaveChanges();
                     MessageBox.Show("Оценка выставлена");
                     Refresh();
@@ -148,7 +148,7 @@ namespace spasite.Components
 
         private void ExitBtn_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Authorizate());
+            NavigationService.Navigate(new AuthorizatePage());
         }
 
         private void NameOfDisciplineSearchTb_TextChanged(object sender, TextChangedEventArgs e)
@@ -157,6 +157,11 @@ namespace spasite.Components
         }
 
         private void ExamsDataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void TeachComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
         }

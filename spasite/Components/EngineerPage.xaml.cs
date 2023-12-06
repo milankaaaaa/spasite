@@ -25,8 +25,8 @@ namespace spasite.Components
             InitializeComponent();
             EmployeesDataGrid.ItemsSource = App.db.Employee.ToList();
             EmployeesDataGrid.DataContext = App.db.Employee.ToList();
-            var PoositionEmployees = App.db.Employee.Where(x => x.Position != "зав. кафедрой").ToList();
-            var chiefEmployees = App.db.Employee.Where(e => e.Position == "зав. кафедрой").ToList();
+            var PositionEmployee = App.db.Employee.Where(x => x.Position != "зав.кафедрой").ToList();
+            var chiefEmployee = App.db.Employee.Where(e => e.Position == "зав.кафедрой").ToList();
             App.CountOfEmployeers = App.db.Employee.Count();
         }
 
@@ -38,7 +38,6 @@ namespace spasite.Components
         private void AddEmployeeButton_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new EditPage(new Employee()));
-
         }
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
@@ -80,14 +79,7 @@ namespace spasite.Components
                     }
 
                 }
-                foreach (var em in App.db.HeadOfTheDepartment.ToList())
-                {
-                    if (em.Employee == EmployeesDataGrid.SelectedItem as Employee)
-                    {
-                        App.db.HeadOfTheDepartment.Remove(App.db.HeadOfTheDepartment.Find(em.id));
-                        App.db.SaveChanges();
-                    }
-                }
+                
                 App.db.Employee.Remove(App.db.Employee.Find(employee.id));
                 App.db.SaveChanges();
 

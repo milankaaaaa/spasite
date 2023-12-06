@@ -10,11 +10,11 @@
 
     <Grid Background="#FFFFE5E9">
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
-            <TextBlock >ФАКУЛЬТЕТ</TextBlock>
-            <ComboBox Name="FacultyCb" Width="200" Text="{Binding Cathedra.Faculty}"  />
-            <TextBlock>НАЗВАНИЕ</TextBlock>
+            <TextBlock Foreground="#FFCE8A97" FontWeight="Bold" >ФАКУЛЬТЕТ</TextBlock>
+            <ComboBox Name="FacultyCb" Width="200" Text="{Binding Departament.Faculty}"  />
+            <TextBlock Foreground="#FFCE8A97" FontWeight="Bold">НАЗВАНИЕ</TextBlock>
             <TextBox Name="Nametb" Width="200"  />
-            <Button Width="200" Content="СОХРАНИТЬ" Name="SaveChangesButton" Click="SaveChangesButton_Click" />
+            <Button Width="200" Content="СОХРАНИТЬ" BorderBrush="#FFCE8A97" Background="Pink" Margin="0 10 0 0" Foreground="White" Name="SaveChangesButton" Click="SaveChangesButton_Click" />
         </StackPanel>
     </Grid>
 </Page>

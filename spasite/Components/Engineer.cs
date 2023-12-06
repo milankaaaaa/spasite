@@ -14,6 +14,8 @@ namespace spasite.Components
     
     public partial class Engineer
     {
+        internal object[] id;
+
         public int Id_engineer { get; set; }
         public Nullable<int> Id_employee { get; set; }
         public string Specialization { get; set; }

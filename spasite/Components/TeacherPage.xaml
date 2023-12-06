@@ -5,11 +5,50 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:spasite.Components"
       mc:Ignorable="d" 
-      d:DesignHeight="850" d:DesignWidth="800"
+      MinHeight="850" MinWidth="800"
       Title="TeacherPage">
 
     <Grid Background="#FFFFDDE3">
         <StackPanel>
+            <StackPanel>
+                <TextBlock HorizontalAlignment="Center" FontWeight="Black" FontSize="16" Margin="10" Foreground="#FFD695A1">Добавление:</TextBlock>
+                <!--<TextBlock HorizontalAlignment="Center" Text="Ученик:"></TextBlock>-->
+                <ComboBox  Name="StudentsComboBox" Width="70" Text="{Binding FirstName}"  DisplayMemberPath="FirstName" Margin="10"/>
+                <ComboBox Name="DiscComboBox" Width="70" Text="{Binding Discipline.Name}" DisplayMemberPath="Name" Margin="10"/>
+                <!--SelectionChanged="StudentsComboBox_SelectionChanged"-->
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Margin="5"> КАБИНЕТ</TextBlock>
+                    <TextBox x:Name="AudithoriumTb" Width="60" ></TextBox>
+                    <!--<ComboBox x:Name="StudComboBox" Width="79"></ComboBox>-->
+                    <TextBlock Margin="5"> ФАМИЛИЯ ПРЕПОДАВАТЕЛЯ:</TextBlock>
+                    <ComboBox x:Name="TeachComboBox" Text="{Binding Employee.LastName}" Width="79" SelectionChanged="TeachComboBox_SelectionChanged"></ComboBox>
+                    <TextBlock Margin="5">ДАТА ЭКЗАМЕНА</TextBlock>
+                    <DatePicker Name="DateOfExamDp"></DatePicker>
+                </StackPanel>
+                <Button Content="ДОБАВИТЬ СТУДЕНТА"  Margin="10" Name="AddStudentToExam" Click="AddStudentToExam_Click" Width="200" BorderBrush="#FFCE8A97" Background="Pink" Foreground="White"/>
+                <TextBlock FontWeight="Black" FontSize="16" Margin="10" Foreground="#FFD695A1">ОЦЕНКА:</TextBlock>
+                <!--<TextBlock Margin="5" > Дисциплина </TextBlock>
+<TextBox  Width="60"></TextBox>-->
+                <ComboBox Name="GradeCB" Width="95" HorizontalAlignment="Center" Text="Введите оценку" Margin="10" >
+                    <ComboBoxItem>5</ComboBoxItem>
+                    <ComboBoxItem>4</ComboBoxItem>
+                    <ComboBoxItem>3</ComboBoxItem>
+                    <ComboBoxItem>2</ComboBoxItem>
+                </ComboBox>
+                <Button x:Name="GradeBtn" Content="ОЦЕНИТЬ СТУДЕНТА" Margin="10" Click="GradeBtn_Click"  Width="200" BorderBrush="#FFCE8A97" Background="Pink" Foreground="White"/>
+                <StackPanel>
+                    <TextBlock VerticalAlignment="Center" FontWeight="Black" Foreground="#FFD695A1">СООРТИРОВКА</TextBlock>
+                    <ComboBox Margin="10" VerticalAlignment="Center" Width="50" Name="AssessmentCb" SelectionChanged="AssessmentCb_SelectionChanged">
+                        <ComboBoxItem>2</ComboBoxItem>
+                        <ComboBoxItem>3</ComboBoxItem>
+                        <ComboBoxItem>4</ComboBoxItem>
+                        <ComboBoxItem>5</ComboBoxItem>
+                    </ComboBox>
+                    <Button VerticalAlignment="Center" Name="ToBaseBtn" Click="ToBaseBtn_Click"  Width="200" BorderBrush="#FFCE8A97" Background="Pink" Foreground="White">ПО УМОЛЧАНИЮ</Button>
+                    <TextBlock VerticalAlignment="Center" Margin="10">ПОИСК
+                    <TextBox  Name="NameOfDisciplineSearchTb" VerticalAlignment="Center" Width="120" TextChanged="NameOfDisciplineSearchTb_TextChanged"></TextBox></TextBlock>
+                </StackPanel>
+            </StackPanel>
             <StackPanel>
                 <Button Name="ExitBtn" Click="ExitBtn_Click" Width="200" BorderBrush="#FFCE8A97" Background="Pink" Foreground="White">ВЫХОД</Button>
             </StackPanel>
@@ -17,50 +56,14 @@
             <DataGrid AutoGenerateColumns="False" Height="300" Name="ExamsDataGrid" Margin="10" Background="#FFFFD0D8" SelectionChanged="ExamsDataGrid_SelectionChanged" >
                 <DataGrid.Columns >
                     <DataGridTextColumn x:Name="id_exam" Header="НАИМЕНОВАНИЕ" Width="110"  Binding="{ Binding Discipline.Name }" />
-                    <DataGridTextColumn x:Name="DateOfExam" Header="ДАТА ЭКЗАМЕНА" Width="105" Binding="{ Binding DateOfExam }" />
-                    <DataGridTextColumn x:Name="RegNumber" Header="ФАМИЛИЯ СТУДЕНТА" Width="132" Binding="{ Binding Student.FirstName }" />
-                    <DataGridTextColumn x:Name="Nunber" Header="ФАМИЛИЯ ПРЕПОДОВАТЕЛЯ" Width="175" Binding="{ Binding Employee.LastName }" />
+                    <DataGridTextColumn x:Name="DateOfExam" Header="ДАТА ЭКЗАМЕНА" Width="105" Binding="{ Binding Date_exam }" />
+                    <DataGridTextColumn x:Name="RegNumber" Header="ФАМИЛИЯ СТУДЕНТА" Width="132" Binding="{ Binding Student.Last_name }" />
+                    <DataGridTextColumn x:Name="Nunber" Header="ФАМИЛИЯ ПРЕПОДОВАТЕЛЯ" Width="175" Binding="{ Binding Employee.Last_name }" />
                     <DataGridTextColumn x:Name="Auditorium" Header="НОМЕР КАБИНЕТА" Width="115" Binding="{ Binding Auditorium }" />
-                    <DataGridTextColumn x:Name="Assessment" Header="ОЦЕНКА"  Width="140" Binding="{ Binding Assessment }" />
+                    <DataGridTextColumn x:Name="Assessment" Header="ОЦЕНКА"  Width="140" Binding="{ Binding Estimation }" />
                 </DataGrid.Columns>
             </DataGrid>
-            <TextBlock FontWeight="Black" FontSize="16" Margin="10" Foreground="#FFD695A1">ДОБАВИТЬ НА ЭКЗАМЕН:</TextBlock>
-            <!--<TextBlock HorizontalAlignment="Center" Text="Ученик:"></TextBlock>-->
-            <ComboBox  Name="StudentsComboBox" Text="{Binding FirstName}" DisplayMemberPath="FirstName" Margin="10"/>
-            <ComboBox Name="DiscComboBox" Text="{Binding Discipline.Name}" DisplayMemberPath="Name" Margin="10"/>
-            <!--SelectionChanged="StudentsComboBox_SelectionChanged"-->
-            <StackPanel Orientation="Horizontal">
-                <TextBlock Margin="5"> КАБИНЕТ</TextBlock>
-                <TextBox x:Name="AudithoriumTb" Width="60" ></TextBox>
-                <!--<ComboBox x:Name="StudComboBox" Width="79"></ComboBox>-->
-                <TextBlock Margin="5"> ФАМИЛИЯ ПРЕПОДАВАТЕЛЯ:</TextBlock>
-                <ComboBox x:Name="TeachComboBox" Text="{Binding Employee.LastName}" Width="79"></ComboBox>
-                <TextBlock Margin="5">ДАТА ЭКЗАМЕНА</TextBlock>
-                <DatePicker Name="DateOfExamDp"></DatePicker>
-            </StackPanel>
-            <Button Content="ДОБАВИТЬ СТУДЕНТА"  Margin="10" Name="AddStudentToExam" Click="AddStudentToExam_Click" Width="200" BorderBrush="#FFCE8A97" Background="Pink" Foreground="White"/>
-            <TextBlock FontWeight="Black" FontSize="16" Margin="10" Foreground="#FFD695A1">ОЦЕНКА:</TextBlock>
-            <!--<TextBlock Margin="5" > Дисциплина </TextBlock>
-    <TextBox  Width="60"></TextBox>-->
-            <ComboBox Name="GradeCB" Width="95" HorizontalAlignment="Center" Text="Введите оценку" Margin="10" >
-                <ComboBoxItem>5</ComboBoxItem>
-                <ComboBoxItem>4</ComboBoxItem>
-                <ComboBoxItem>3</ComboBoxItem>
-                <ComboBoxItem>2</ComboBoxItem>
-            </ComboBox>
-            <Button x:Name="GradeBtn" Content="ОЦЕНИТЬ СТУДЕНТА" Margin="10" Click="GradeBtn_Click"  Width="200" BorderBrush="#FFCE8A97" Background="Pink" Foreground="White"/>
-            <StackPanel>
-                <TextBlock VerticalAlignment="Center" FontWeight="Black" Foreground="#FFD695A1">СООРТИРОВКА</TextBlock>
-                <ComboBox Margin="10" VerticalAlignment="Center" Width="50" Name="AssessmentCb" SelectionChanged="AssessmentCb_SelectionChanged">
-                    <ComboBoxItem>2</ComboBoxItem>
-                    <ComboBoxItem>3</ComboBoxItem>
-                    <ComboBoxItem>4</ComboBoxItem>
-                    <ComboBoxItem>5</ComboBoxItem>
-                </ComboBox>
-                <Button VerticalAlignment="Center" Name="ToBaseBtn" Click="ToBaseBtn_Click"  Width="200" BorderBrush="#FFCE8A97" Background="Pink" Foreground="White">ПО УМОЛЧАНИЮ</Button>
-                <TextBlock VerticalAlignment="Center" Margin="10">ПОИСК</TextBlock>
-                <TextBox Name="NameOfDisciplineSearchTb" VerticalAlignment="Center" Width="120" Margin="0 0 0 0" TextChanged="NameOfDisciplineSearchTb_TextChanged"></TextBox>
-            </StackPanel>
+         
         </StackPanel>
     </Grid>
 </Page>

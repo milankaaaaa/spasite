@@ -27,19 +27,15 @@ namespace spasite.Components
             OrderCb.DisplayMemberPath = "Name";
             Refresh();
         }
-
-
         private void BackBtn_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.GoBack();
         }
-
         private void AddBtn_Click(object sender, RoutedEventArgs e)
         {
-       
+            NavigationService.Navigate(new EditDepartmentPage(DepartmentsDataGrid.SelectedItem as Department));
 
         }
-
         void Refresh()
         {
             DepartmentsDataGrid.ItemsSource = null;
@@ -48,25 +44,20 @@ namespace spasite.Components
             {
                 
             }
-          
-
         }
         private void OrderCb_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             Refresh();
         }
-
         private void ByTheBaseBtn_Click(object sender, RoutedEventArgs e)
         {
             OrderCb.SelectedIndex = -1;
             Refresh();
         }
-
         private void ExitBtn_Click(object sender, RoutedEventArgs e)
         {
      
         }
-
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             Refresh();

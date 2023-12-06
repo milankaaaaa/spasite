@@ -24,7 +24,9 @@ namespace spasite.Components
         {
             throw new UnintentionalCodeFirstException();
         }
-    
+
+        
+
         public virtual DbSet<Application> Application { get; set; }
         public virtual DbSet<Country> Country { get; set; }
         public virtual DbSet<Department> Department { get; set; }

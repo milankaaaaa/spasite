@@ -20,11 +20,11 @@ namespace spasite.Components
     /// </summary>
     public partial class EditDepartmentPage : Page
     {
-        Cathedra cathedra;
+        Department department;
 
         Employee employee;
 
-        public EditDepartmentPage(Cathedra _cathedra)
+        public EditDepartmentPage(Department _department)
         {
             InitializeComponent();
             FacultyCb.ItemsSource = App.db.Faculty.ToList();
@@ -40,21 +40,19 @@ namespace spasite.Components
                 {
                     Abbreviation += i.Substring(0, 1);
                 }
-                App.db.Cathedra.Add(new Cathedra()
+                App.db.Department.Add(new Department()
                 {
-                    Code = Abbreviation.Substring(0, 1).ToUpper() + Abbreviation.Substring(1, Abbreviation.Length - 1).ToLower(),
+                    Id_code = Abbreviation.Substring(0, 1).ToUpper() + Abbreviation.Substring(1, Abbreviation.Length - 1).ToLower(),
                     Name = Nametb.Text,
-                    Faculty = (FacultyCb.SelectedItem as Faculty).Abbreviation
-                });
+                    Faculty = (FacultyCb.SelectedItem as Department).Faculty,
+                }); ;
                 App.db.SaveChanges();
-                MessageBox.Show("Все норм");
+                MessageBox.Show("Правильно");
                 NavigationService.GoBack();
-
             }
             else
             {
                 MessageBox.Show("Неправильнно");
-
             }
         }
     }

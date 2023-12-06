@@ -20,12 +20,17 @@ namespace spasite.Components
     /// </summary>
     public partial class EditPage : Page
     {
-        public EditPage()
+        public EditPage(Employee employee)
         {
             InitializeComponent();
         }
 
         private void CodeCb_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void SaveChangesButton_Click(object sender, RoutedEventArgs e)
         {
 
         }

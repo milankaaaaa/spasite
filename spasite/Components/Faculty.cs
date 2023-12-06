@@ -25,5 +25,6 @@ namespace spasite.Components
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Department> Department { get; set; }
+        public object Abbreviation { get; internal set; }
     }
 }

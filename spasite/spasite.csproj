@@ -88,19 +88,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Components\Raspredeleniye.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Components\TeacherMode.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Components\TeacherPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Components\Vxod.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -179,9 +167,6 @@
       <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
     <Compile Include="Components\Navigation.cs" />
-    <Compile Include="Components\Raspredeleniye.xaml.cs">
-      <DependentUpon>Raspredeleniye.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Components\Specialization.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -191,14 +176,8 @@
     <Compile Include="Components\Teacher.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Components\TeacherMode.xaml.cs">
-      <DependentUpon>TeacherMode.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Components\TeacherPage.xaml.cs">
       <DependentUpon>TeacherPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Components\Vxod.xaml.cs">
-      <DependentUpon>Vxod.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>

@@ -18,7 +18,7 @@ namespace spasite.Components
         internal object idcode;
 
         public int Id_exam { get; set; }
-        public System.DateTime Date_exam { get; set; }
+        public DateTime? Date_exam { get; set; }
         public Nullable<int> Id_discipline { get; set; }
         public Nullable<int> Id_student { get; set; }
         public Nullable<int> Id_employee { get; set; }

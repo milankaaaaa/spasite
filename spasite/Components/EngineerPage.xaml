@@ -38,10 +38,6 @@
                         <TextBox Margin="10"  Name="NameOfDisciplineSearchTb" Width="120" TextChanged="NameOfDisciplineSearchTb_TextChanged"></TextBox>
 
                     </StackPanel>
-
-                    <StackPanel>
-                        <Button x:Name="ExitBtn" Click="ExitBtn_Click">Выход</Button>
-                    </StackPanel>
                 </StackPanel>
             </StackPanel>
         </StackPanel>
