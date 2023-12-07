@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -47,5 +49,35 @@ namespace spasite.Components
         {
             NavigationService.Navigate(new GuestPage());
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e) // Кнопка создания QR кода
+        {
+            // Ссылка на XL таблицу
+            string soucer_xl = "https://sun9-33.userapi.com/impg/cz3daX-emq569M98GO2lcuyZHSJC1PHhiuwNJw/Z_UkLjbqEUk.jpg?size=736x734&quality=95&sign=025cc195c04ff974f288706210452692&c_uniq_tag=X6kgob0wFHl8KGS8LfM9aBU5ezW4pdeLpjk0yyWifLM&type=album"; 
+            // Создание переменной библиотеки QRCoder
+            QRCoder.QRCodeGenerator qr = new QRCoder.QRCodeGenerator();
+            // Присваеваем значиения
+            QRCoder.QRCodeData data = qr.CreateQrCode(soucer_xl, QRCoder.QRCodeGenerator.ECCLevel.L);
+            // переводим в Qr
+            QRCoder.QRCode code = new QRCoder.QRCode(data);
+            Bitmap bitmap = code.GetGraphic(100);
+            /// Создание картинки
+            using (MemoryStream memory = new MemoryStream())
+            {
+                bitmap.Save(memory, System.Drawing.Imaging.ImageFormat.Bmp);
+                memory.Position = 0;
+                BitmapImage bitmapimage = new BitmapImage();
+
+
+                bitmapimage.BeginInit();
+                bitmapimage.StreamSource = memory;
+                bitmapimage.CacheOption = BitmapCacheOption.OnLoad;
+                bitmapimage.EndInit();
+                imageQr.Source = bitmapimage;
+            }
+        }
+
+
+
     }
 }

@@ -17,8 +17,16 @@
                 <TextBox x:Name="PasswordTb" Margin="10" Width="85"/>
             </StackPanel>
             <Button x:Name="EnterBtn" Background="Pink" Foreground="White" BorderBrush="#FFCE8A97" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 0 0 0" Content="вход" Width="85" Click="EnterBtn_Click"/>
-            <Button x:Name="Guest" Background="Pink" Foreground="White" BorderBrush="#FFCE8A97" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 0 0 0" Content="Гость"  Width="85" Click="Guest_Click" > </Button>
-           </StackPanel>
+            <Button x:Name="Guest" Background="Pink" Foreground="White" BorderBrush="#FFCE8A97" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 0 0 0" Content="гость"  Width="85" Click="Guest_Click" ></Button>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0 0 40 0">
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Button x:Name="createQrBtn" Content="Создать QR" Background="Pink" Foreground="White" BorderBrush="#FFCE8A97" Width="150" Height="50" Click="Button_Click"></Button>
+            </StackPanel>
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Image x:Name="imageQr" Height="200" Width="200" ></Image>
+            </StackPanel>
+        </StackPanel>
         <Image Source="\Resourses\wpfka.png" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="1" Width="220" Margin="80 0 0 50" ></Image>
     </Grid>
 </Page>

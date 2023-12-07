@@ -32,7 +32,7 @@ namespace spasite.Components
         }
 
         public void SaveChangesButton_Click(object sender, RoutedEventArgs e)
-        {
+        { 
             if (FacultyCb.SelectedIndex != -1 && Nametb.Text.Length > 0)
             {
                 string Abbreviation = "";
